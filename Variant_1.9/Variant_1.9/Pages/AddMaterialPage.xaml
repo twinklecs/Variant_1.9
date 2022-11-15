@@ -1,0 +1,185 @@
+﻿<Page x:Class="Variant_1._9.Pages.AddMaterialPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Variant_1._9.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="820"
+      Title="Добавить материал">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Название" FontSize="18" VerticalAlignment="Center" Margin="60 0 0 0">
+            <TextBlock.Style>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=tbTitle}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <TextBox FontSize="18" Background="Transparent" 
+                     x:Name="tbTitle" Grid.Row="0"
+                     Style="{StaticResource tb}"/>
+
+        <TextBlock Grid.Row="1" Text="Количество в упаковке" FontSize="18" VerticalAlignment="Center" Margin="60 0 0 0">
+            <TextBlock.Style>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=tbCountInPack}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <TextBox FontSize="18" Background="Transparent" 
+                     x:Name="tbCountInPack" Grid.Row="1"
+                     Style="{StaticResource tb}"/>
+
+        <TextBlock Grid.Row="2" Text="Еденица измерения" FontSize="18" VerticalAlignment="Center" Margin="60 0 0 0">
+            <TextBlock.Style>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=tbUnit}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <TextBox FontSize="18" Background="Transparent" 
+                     x:Name="tbUnit" Grid.Row="2"
+                     Style="{StaticResource tb}"/>
+
+        <TextBlock Grid.Row="3" Text="Количество в наличии" FontSize="18" VerticalAlignment="Center" Margin="60 0 0 0">
+            <TextBlock.Style>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=tbCountInStock}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <TextBox FontSize="18" Background="Transparent" 
+                     x:Name="tbCountInStock" Grid.Row="3"
+                     Style="{StaticResource tb}"/>
+
+        <TextBlock Grid.Row="4" Text="Минимальное количество" FontSize="18" VerticalAlignment="Center" Margin="60 0 0 0">
+            <TextBlock.Style>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=tbMinCount}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <TextBox FontSize="18" Background="Transparent" 
+                     x:Name="tbMinCount" Grid.Row="4"
+                     Style="{StaticResource tb}"/>
+
+        <TextBlock Grid.Row="5" Text="Описание" FontSize="18" VerticalAlignment="Center" Margin="60 0 0 0">
+            <TextBlock.Style>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=tbDescription}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <TextBox FontSize="18" Background="Transparent" 
+                     x:Name="tbDescription" Grid.Row="5"
+                     Style="{StaticResource tb}"/>
+
+        <TextBlock Grid.Row="6" Text="Стоимость" FontSize="18" VerticalAlignment="Center" Margin="60 0 0 0">
+            <TextBlock.Style>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=tbCost}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <TextBox FontSize="18" Background="Transparent" 
+                     x:Name="tbCost" Grid.Row="6"
+                     Style="{StaticResource tb}"/>
+
+        <TextBlock Grid.Row="7" Text="Путь к картинке" FontSize="18" VerticalAlignment="Center" Margin="60 0 0 0">
+            <TextBlock.Style>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=tbImageString}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <TextBox FontSize="18" Background="Transparent" 
+                     x:Name="tbImageString" Grid.Row="7"
+                     Style="{StaticResource tb}"/>
+
+        <TextBlock Grid.Row="8" Text="Категория" FontSize="18" VerticalAlignment="Center" Margin="60 0 0 0">
+            <TextBlock.Style>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=tbTypeString}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <TextBox FontSize="18" Background="Transparent" 
+                     x:Name="tbTypeString" Grid.Row="8"
+                     Style="{StaticResource tb}"/>
+
+        <Grid Grid.Row="9">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="btnBack" Content="Отменить" Style="{StaticResource btn}" 
+                    Grid.Column="0" Margin="20 10 20 10" Click="btnBack_Click"/>
+
+            <Button x:Name="btnSave" Content="Сохранить" Style="{StaticResource btn}"
+                    Grid.Column="2" Margin="20 10 20 10" Click="btnSave_Click"/>
+
+        </Grid>
+    </Grid>
+</Page>

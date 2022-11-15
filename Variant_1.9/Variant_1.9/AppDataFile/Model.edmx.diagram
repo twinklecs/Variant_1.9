@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fce6d005b11d401f84ff2de3a343eb81" Name="Diagram1" ZoomLevel="114">
+        <EntityTypeShape EntityType="BigPackModel.Agent" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigPackModel.AgentPriorityHistory" Width="1.5" PointX="10.5" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigPackModel.AgentType" Width="1.5" PointX="6" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigPackModel.Material" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigPackModel.MaterialCountHistory" Width="1.5" PointX="5.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigPackModel.MaterialType" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigPackModel.Product" Width="1.5" PointX="8.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigPackModel.ProductCostHistory" Width="1.5" PointX="10.5" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigPackModel.ProductSale" Width="1.5" PointX="10.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigPackModel.ProductType" Width="1.5" PointX="6" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigPackModel.Shop" Width="1.5" PointX="10.5" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigPackModel.Supplier" Width="1.5" PointX="5.25" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigPackModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
+        <AssociationConnector Association="BigPackModel.FK_Agent_AgentType" ManuallyRouted="false" />
+        <AssociationConnector Association="BigPackModel.FK_AgentPriorityHistory_Agent" ManuallyRouted="false" />
+        <AssociationConnector Association="BigPackModel.FK_ProductSale_Agent" ManuallyRouted="false" />
+        <AssociationConnector Association="BigPackModel.FK_Shop_Agent" ManuallyRouted="false" />
+        <AssociationConnector Association="BigPackModel.FK_Material_MaterialType" ManuallyRouted="false" />
+        <AssociationConnector Association="BigPackModel.FK_MaterialCountHistory_Material" ManuallyRouted="false" />
+        <AssociationConnector Association="BigPackModel.FK_Product_ProductType" ManuallyRouted="false" />
+        <AssociationConnector Association="BigPackModel.FK_ProductCostHistory_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="BigPackModel.FK_ProductSale_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="BigPackModel.MaterialSupplier" ManuallyRouted="false" />
+        <AssociationConnector Association="BigPackModel.ProductMaterial" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,83 @@
+﻿<Page x:Class="Variant_1._9.Pages.SupplierPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Variant_1._9.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="1100"
+      Title="MarerialsPages">
+
+    <Grid Margin="20">
+
+        <Border>
+            <ScrollViewer>
+                <ListBox x:Name="ListSupplier" Background="Transparent" BorderBrush="Transparent"
+                             Template="{StaticResource ResourceKey=NoScroll}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <ListBoxItem BorderBrush="Transparent" Background="White" Width="800">
+                                <Border Background="White" BorderBrush="Black" BorderThickness="2" Margin="0,20,0,20" Width="750" Height="230">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="20"/>
+                                            <RowDefinition/>
+                                            <RowDefinition Height="60"/>
+                                            <RowDefinition Height="10"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="10"/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition Width="135"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <StackPanel Grid.Column="1" Grid.Row="1">
+                                            <TextBlock Margin="0 10 0 0" TextWrapping="Wrap" FontSize="15" FontWeight="ExtraLight">
+                                                <TextBlock.Inlines>
+                                                    <Run  Text="Наименование поставщика:"  FontWeight="Black"/>
+                                                    <Run Text="{Binding Title}"/>
+                                                </TextBlock.Inlines>
+                                            </TextBlock>
+                                            <TextBlock Margin="0 5 0 0" TextWrapping="Wrap" FontSize="14"  HorizontalAlignment="Left">
+                                                <TextBlock.Inlines>
+                                                    <Run Text="ИНН:" />
+                                                    <Run Text="{Binding INN}" FontSize="14" />
+                                                </TextBlock.Inlines>
+                                            </TextBlock>
+                                            <TextBlock Margin="0 5 0 0" TextWrapping="Wrap" FontSize="14"  HorizontalAlignment="Left">
+                                                <TextBlock.Inlines>
+                                                    <Run Text="Дата начала работы с поставщиком:" />
+                                                    <Run Text="{Binding StartDate}" FontSize="14" />
+                                                </TextBlock.Inlines>
+                                            </TextBlock>
+                                            <TextBlock Margin="0 5 0 0" TextWrapping="Wrap" FontSize="14"  HorizontalAlignment="Left">
+                                                <TextBlock.Inlines>
+                                                    <Run Text="Рейтинг качества:" />
+                                                    <Run Text="{Binding QualityRating}" FontSize="14" />
+                                                </TextBlock.Inlines>
+                                            </TextBlock>
+                                            <TextBlock Margin="0 5 0 0" TextWrapping="Wrap" FontSize="14"  HorizontalAlignment="Left">
+                                                <TextBlock.Inlines>
+                                                    <Run Text="Тип поставщика:" />
+                                                    <Run Text="{Binding SupplierType}" FontSize="14" />
+                                                </TextBlock.Inlines>
+                                            </TextBlock>
+                                        </StackPanel>
+
+                                        <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4">
+
+                                            <Button x:Name="btnDelete" Grid.Column="0" Style="{StaticResource btn}"
+                                                                Margin="20 10 20 10" Content="Удалить"
+                                                                Click="btnDelete_Click"/>
+
+                                        </Grid>
+                                    </Grid>
+                                </Border>
+                            </ListBoxItem>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</Page>

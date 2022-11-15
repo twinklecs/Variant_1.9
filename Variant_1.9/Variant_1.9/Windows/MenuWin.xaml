@@ -1,0 +1,39 @@
+﻿<Window x:Class="Variant_1._9.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Variant_1._9"
+        mc:Ignorable="d"
+        Title="Большая пачка"
+        Height="650" Width="1100"
+        FontFamily="Verdana"
+        ResizeMode="CanMinimize">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Меню/Menu -->
+        <Grid Grid.Column="0" Background="#FFC1C1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Image Grid.Row="0" Margin="20" Source="/Resources/bigpack_icon.png"/>
+            <StackPanel Grid.Row="1">
+                <Button x:Name="btnMaterials" Style="{StaticResource btnMenu}" Content="Материалы" Margin="20 40 20 20" Click="btnMaterials_Click"/>
+                <Button x:Name="btnSuplliers" Style="{StaticResource btnMenu}" Content="Поставщики" Click="btnSuplliers_Click"/>
+                <Button x:Name="btnAdd" Style="{StaticResource btnMenu}" Content="Добавить" Click="btnAdd_Click"/>
+            </StackPanel>
+        </Grid>
+
+        <Image Grid.Column="1" Opacity="0.1" Margin="20" Source="/Resources/bigpack_icon.png"/>
+        
+        <Frame x:Name="frmMain" Grid.RowSpan="2" Grid.Column="1" NavigationUIVisibility="Hidden"/>
+ 
+    </Grid>
+</Window>

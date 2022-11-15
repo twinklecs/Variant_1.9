@@ -1,0 +1,34 @@
+﻿<Window x:Class="Variant_1._9.Windows.ConfirmWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Variant_1._9.Windows"
+        mc:Ignorable="d"
+        Title="Подтверждение" 
+        Height="180" Width="300"
+        FontFamily="Verdana"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" FontWeight="Bold" Text="Вы уверены?"/>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="btnBack" Grid.Column="0" Style="{StaticResource btn}"
+                    Margin="10 15 10 15" Content="Нет" Click="btnBack_Click"/>
+            
+            <Button x:Name="btnOk" Grid.Column="1" Style="{StaticResource btn}"
+                    Margin="10 15 10 15" Content="Да" Click="btnOk_Click"/>
+        </Grid>
+    </Grid>
+</Window>

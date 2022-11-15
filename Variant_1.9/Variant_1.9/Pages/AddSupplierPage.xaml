@@ -1,0 +1,120 @@
+﻿<Page x:Class="Variant_1._9.Pages.AddSupplierPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Variant_1._9.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="820"
+      Title="Добавление поставщика">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Наименование поставщика" FontSize="18" VerticalAlignment="Center" Margin="60 0 0 0">
+            <TextBlock.Style>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=tbTitle}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <TextBox FontSize="18" Background="Transparent" 
+                     x:Name="tbTitle" Grid.Row="0"
+                     Style="{StaticResource tb}"/>
+
+        <TextBlock Grid.Row="1" Text="ИНН" FontSize="18" VerticalAlignment="Center" Margin="60 0 0 0">
+            <TextBlock.Style>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=tbINN}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <TextBox FontSize="18" Background="Transparent" 
+                     x:Name="tbINN" Grid.Row="1"
+                     Style="{StaticResource tb}"/>
+
+        <TextBlock Grid.Row="2" Text="Дата начала работы с поставщиком" FontSize="18" VerticalAlignment="Center" Margin="60 0 0 0">
+            <TextBlock.Style>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=tbStartDate}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <TextBox FontSize="18" Background="Transparent" 
+                     x:Name="tbStartDate" Grid.Row="2"
+                     Style="{StaticResource tb}"/>
+
+        <TextBlock Grid.Row="3" Text=" Рейтинг качества" FontSize="18" VerticalAlignment="Center" Margin="60 0 0 0">
+            <TextBlock.Style>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=tbQualityRating}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <TextBox FontSize="18" Background="Transparent" 
+                     x:Name="tbQualityRating" Grid.Row="3"
+                     Style="{StaticResource tb}"/>
+
+        <TextBlock Grid.Row="4" Text="Тип поставщика" FontSize="18" VerticalAlignment="Center" Margin="60 0 0 0">
+            <TextBlock.Style>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=tbSupplierType}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <TextBox FontSize="18" Background="Transparent" 
+                     x:Name="tbSupplierType" Grid.Row="4"
+                     Style="{StaticResource tb}"/>
+
+        
+
+        <Grid Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="btnBack" Content="Отменить" Style="{StaticResource btn}" 
+                    Grid.Column="0" Margin="20 30 20 20" Click="btnBack_Click"/>
+
+            <Button x:Name="btnSave" Content="Сохранить" Style="{StaticResource btn}"
+                    Grid.Column="2" Margin="20 30 20 20" Click="btnSave_Click"/>
+
+        </Grid>
+    </Grid>
+</Page>
